@@ -1,3 +1,3 @@
 This is the personal website of Michele Pegorin
 
-https://michelepegorin.github.io/about/
+https://michelepegorin.github.io/about/index.html
