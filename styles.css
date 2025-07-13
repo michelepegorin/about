@@ -1,81 +1,233 @@
-:root {
-  --primary-bg: #1a1a1a;
-  --primary-text: #ffffff;
-  --link-hover: #00aaff;
-  --focus-outline: #ffcc00;
-}
-
-body {
-  margin: 0;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #fff;
-  color: #000;
-}
-
-/* Header Section */
-header {
-  background-color: var(--primary-bg);
-  color: var(--primary-text);
-  padding: 15px 30px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  letter-spacing: 1px;
-}
-
-/* Navigation Menu */
-nav {
-  display: flex;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
+/* General Styles */
+html, body {
+  height: 100%;
   margin: 0;
   padding: 0;
 }
 
-nav ul li {
-  margin-left: 25px;
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  background-color: #ffffff;
+  color: #333333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-nav ul li a {
-  color: var(--primary-text);
+a {
   text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s ease;
 }
 
-nav ul li a:hover,
-nav ul li a:focus {
-  color: var(--link-hover);
+a:focus,
+.button:focus {
+  outline: 3px solid #ffa500;
+  outline-offset: 2px;
+}
+
+/* Header */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #004080;
+  padding: 1rem 2rem;
+  flex-wrap: wrap;
+}
+
+.logo-text {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-links a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+}
+
+.nav-links a:hover,
+.nav-links a:focus {
+  background-color: #002b5c;
+  border-radius: 4px;
   outline: none;
 }
 
-/* Focus Indicator for Keyboard Users */
-nav ul li a:focus-visible {
-  outline: 3px solid var(--focus-outline);
+/* Main */
+main {
+  padding: 2rem;
+}
+
+.about-me {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+}
+
+.about-me img {
+  max-width: 300px;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Projects Section */
+.project-links {
+  padding: 2rem;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.project-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #004080;
+  color: #ffffff;
+  border-radius: 4px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover,
+.button:focus {
+  background-color: #002b5c;
+  color: #ffffff;
+}
+
+/* Footer */
+footer {
+  background-color: #f2f2f2;
+  color: #000000;
+  padding: 1rem;
+  text-align: center;
+   margin-top: auto; 
+}
+
+.social-links a {
+  margin: 0 0.5rem;
+  color: #004080;
+  text-decoration: underline;
+}
+
+.social-links a:hover,
+.social-links a:focus {
+  color: #002b5c;
+}
+
+/* Portfolio Projects */
+.portfolio-content {
+  padding: 2rem;
+}
+
+.project-gallery {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.project-card {
+  background-color: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.project-card h2 a {
+  color: #004080;
+  text-decoration: none;
+}
+
+.project-card h2 a:hover,
+.project-card h2 a:focus {
+  text-decoration: underline;
+}
+
+/* Blog Styles */
+.blog-content {
+  padding: 2rem;
+}
+
+.blog-list {
+  display: grid;
+  gap: 2rem;
+}
+
+.blog-post-preview {
+  padding: 1.5rem;
+  border-left: 4px solid #004080;
+  background-color: #fefefe;
   border-radius: 4px;
 }
 
-/* Responsive Navigation */
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  nav ul {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  nav ul li {
-    margin: 10px 0;
-  }
+.blog-post-preview h2 a {
+  color: #004080;
+  text-decoration: none;
 }
+
+.blog-post-preview h2 a:hover,
+.blog-post-preview h2 a:focus {
+  text-decoration: underline;
+}
+
+.blog-post-preview .date {
+  font-size: 0.875rem;
+  color: #555555;
+  margin-bottom: 0.5rem;
+}
+
+.project-detail {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.project-detail img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+}
+
+.project-detail h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.project-date {
+  font-size: 0.875rem;
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.project-detail section {
+  margin-bottom: 2rem;
+}
+
+.project-detail a {
+  color: #004080;
+  text-decoration: underline;
+}
+
+.project-detail a:hover,
+.project-detail a:focus {
+  color: #002b5c;
+  outline: none;
+}
+
+
